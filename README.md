@@ -48,6 +48,8 @@ Skipping configuration leads to misrouted tickets, incorrect access, and unreali
 Log in to the **Admin Panel** with the admin account you created during installation:  
 [http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php)
 
+<a href="http://localhost/osTicket/scp/login.php" target="_blank" rel="noopener">osTicket Login</a>
+
 In osTicket you can toggle between:
 - **Admin Panel** (system configuration)
 - **Agent Panel** (day-to-day ticket work)
