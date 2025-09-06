@@ -32,7 +32,7 @@ This guide walks you through a **basic post-installation configuration** of the 
 
 ---
 
-## Why Configure Before Creating Tickets
+### Why Configure Before Creating Tickets
 **Short answer:** Configuration establishes the **rules, access, and workflows** the system follows.  
 **Why it matters:** Proper setup ensures:
 - The right **roles/permissions** control who can see and do what.
@@ -44,7 +44,7 @@ Skipping configuration leads to misrouted tickets, incorrect access, and unreali
 
 ---
 
-## Getting Started — Log In and Panel Switch
+### Getting Started — Log In and Panel Switch
 Log in to the **Admin Panel** with the admin account you created during installation:  
 [http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php)
 
@@ -56,7 +56,7 @@ For this guide, you’ll primarily use the **Admin Panel**.
 
 ---
 
-## Admin Panel Overview (What You Can Configure)
+### Admin Panel Overview (What You Can Configure)
 - **Roles & Permissions:** Define what agents can view/do.
 - **Departments:** Control visibility and routing by org group.
 - **Teams:** Cross-department collaboration groups.
@@ -68,7 +68,7 @@ For this guide, you’ll primarily use the **Admin Panel**.
 
 ---
 
-## STEP 1 — Configure Roles
+### STEP 1 — Configure Roles
 **Why:** Roles define **permissions** (view, reply, assign, manage) that agents have **per department**. Clear roles prevent over-permissioning and protect data.
 
 **Instructions:**  
@@ -81,7 +81,7 @@ Admin Panel → **Agents** → **Roles**
 
 ---
 
-## STEP 2 — Configure Departments
+### STEP 2 — Configure Departments
 **Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, CIS Admins). They keep workflows organized and tickets routed correctly.
 
 **Instructions:**  
@@ -94,7 +94,7 @@ Admin Panel → **Agents** → **Departments**
 
 ---
 
-## STEP 3 — Configure Teams
+### STEP 3 — Configure Teams
 **Why:** Teams allow **cross-department collaboration** on specific issues/projects (e.g., an “Online Banking” team that includes Help Desk + CIS Admins).
 
 **Instructions:**  
@@ -107,7 +107,7 @@ Admin Panel → **Agents** → **Teams**
 
 ---
 
-## STEP 4 — Configure Agents
+### STEP 4 — Configure Agents
 **Why:** Agents are the staff who **work tickets**. Assigning roles, departments, and teams ensures the **right people** see and act on the **right tickets**.
 
 **Instructions:**  
@@ -120,7 +120,7 @@ Admin Panel → **Agents**
 
 ---
 
-## STEP 5 — Configure Users
+### STEP 5 — Configure Users
 **Why:** Users are the **ticket owners** (end customers). They submit requests and track their own tickets; they don’t access admin/agent panels.
 
 **Instructions:**  
@@ -133,7 +133,7 @@ Admin Panel → **Agents**
 
 ---
 
-## STEP 6 — Configure SLAs
+### STEP 6 — Configure SLAs
 **Why:** SLAs define **response/resolution timeframes** (e.g., critical vs normal). They drive priority, overdue status, and performance tracking.
 
 **Instructions:**  
@@ -149,7 +149,7 @@ Admin Panel → **Manage** → **SLA**
 
 ---
 
-## STEP 7 — Configure Help Topics
+### STEP 7 — Configure Help Topics
 **Why:** Help Topics categorize issues (e.g., “Password Reset,” “Equipment Request,” “Business Critical Outage”) and guide **routing**, **priority**, and **reporting**.
 
 **Instructions:**  
@@ -164,7 +164,7 @@ Admin Panel → **Manage** → **Help Topics**
 
 ---
 
-## Summary / Next Steps
+### Summary / Next Steps
 You’ve configured the core building blocks that control **who** sees **what**, **how** tickets are routed, and **how fast** they must be handled.  
 **Now you’re ready to practice with mock tickets** that behave like real requests:
 1. Create users (or import a list).  
