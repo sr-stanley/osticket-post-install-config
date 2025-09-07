@@ -77,18 +77,22 @@ For this guide, you’ll primarily use the **Admin Panel**.
 ### STEP 1 — Configure Roles
 **Why:** Roles define **permissions** (view, reply, assign, manage) that agents have **per department**. Clear roles prevent over-permissioning and protect data.
 
-**Instructions:**  
+**Outline:**  
 Admin Panel → **Agents** → **Roles**  
 - **Add** new roles.  
 - Use **More** to enable/disable/delete.  
 - Click a role to set permissions for **Tickets**, **Tasks**, **Knowledgebase**.
 
-**Tips:** 
-- Start by creating roles like ***Help Desk (Tier 1)*** and ***Supervisor*** and grant different permissions for each role.
-  - **Help Desk (Tier 1)**
+**Instructions:** 
+- Start by creating roles like ***Agent (Tier 1)***, ***Maintenance Tech*** and ***Supervisor*** and grant different permissions for each role.
+  - **Agent (Tier 1)**
     - Permissions → Assign, Close, Create, Link, Mark as Answered, Post Reply, Release.
     - Tasks → Assign, Close, Create, Post Reply.
-    - Knowledgebase → Premade.
+    - Knowledgebase → None.
+  - **Maintenance Tech**
+    - Permissions → Close, Create, Link, Mark as Answered, Post Reply, Release.
+    - Tasks → Close, Create, Post Reply.
+    - Premade → None.
   - **Supervisor**
     - Permissions → All permissions except delete.
     - Tasks → All tasks except delete.
@@ -103,7 +107,7 @@ Admin Panel → **Agents** → **Roles**
 ---
 
 ### STEP 2 — Configure Departments
-**Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, SysAdmins). They keep workflows organized and tickets routed correctly.
+**Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, Security). They keep workflows organized and tickets routed correctly.
 
 **Instructions:**  
 Admin Panel → **Agents** → **Departments**  
@@ -112,9 +116,11 @@ Admin Panel → **Agents** → **Departments**
 - Click a department to adjust settings and access.
 
 **Tips:** 
-- Start by creating deparments like ***Help Desk*** and ***Systems***.
-  - **Help Desk (Tier 1)**
-    - Rename *Support* to *Help Desk (Tier 1)*
+- Start by creating deparments like ***Help Desk***, ***Maintenance*** and ***Systems***.
+  - **Help Desk**
+    - Rename *Support* to *Help Desk*
+  - **Maintenance**
+    - Keep as is (comes already created when setting up osTicket).
   - **Systems**
     - Parent → Top-Level Department
 - The *access* tab allows you to add agents to each department, we will add agents later.
@@ -140,6 +146,7 @@ Admin Panel → **Agents** → **Teams**
 
 **Tips:** 
 - Start by creating teams like ***Accounts and Passwords*** and ***PC Fix***.
+- *Level I Support* comes already created when setting up osTicket, **delete** it to simplify the mock ticket workflow.
 - You can add agents to these teams after they have been entered.
 
 <img width="955" height="300" alt="3 1 configure teams" src="https://github.com/user-attachments/assets/0bc33c3e-d6a2-4965-87ed-f2c0f904a210" />
@@ -157,7 +164,59 @@ Admin Panel → **Agents**
 - **More:** enable/disable, reset permissions, change departments, export, delete.  
 - Click an agent to edit **account**, **access**, **permissions**, **teams**.
 
-**Tips:** Least privilege: grant only what the agent needs.
+**Tips:**
+- We will work through creating three agents and configure their **accounts**, **access**, **permissions** and **teams**.
+- Under **Account**, give them a name, email (can be a fake email for mock tickets), username, and set a password.
+- When setting the password:
+  1. Uncheck "Send the agent a password reset email"
+  2. Enter a New Password
+  3. Uncheck "Require password change at next login, Click **Update**.
+
+  - **Agent 1** – *Agent (Tier1)*
+    - **Access**
+      - Assign to department **Help Desk** and set the role to **Agent (Tier 1)**
+    - **Permissions**
+      - **Users** → Create, Edit, Manage Account, User Directory
+      - **Organizations** → Create, Edit
+      - **Knowledgebase** → None
+      - **Miscellaneous** → Agent
+    - **Teams** → **Accounts and Passwords** and **PC Fix**
+   
+  - **Agent 2** – *Maintenance Worker*
+    - **Access**
+      - Assign to department **Maintenance** and set the role to **Maintenance Tech**
+    - **Permissions**
+      - **Users** → User Directory
+      - **Organizations** → None
+      - **Knowledgebase** → None
+      - **Miscellaneous** → None
+    - **Teams** → None
+   
+  - **Agent 3** – *Supervisor*
+    - **Access**
+      - Assign to department **Help Desk** and set the role to **Supervisor**
+      - Assign to extedned access to department **Systems** and set the role to **Supervisor**
+    - **Permissions**
+      - **Users** → Create, Edit, Manage Account, User Directory
+      - **Organizations** → Create, Edit
+      - **Knowledgebase** → FAQ
+      - **Miscellaneous** → Agent, Banlist, Department, Search, Stats
+    - **Teams** → **Accounts and Passwords** and **PC Fix**
+
+
+
+
+
+
+
+  - **Agent 2** – *Maintenance Worker*
+    - Assign to department **Maintenance**
+    - Assign to role **Maintenance Tech**
+    - Do not assign to any team
+  - **Agent 3** – *Supervisor*
+    - Assign to department **Help Desk**
+    - Assign to role **Supervisor**
+    - Assign to teams **Account and Passwords** and **PC Fix**
 
 <img width="953" height="339" alt="4 1 configure agents" src="https://github.com/user-attachments/assets/197e9d1f-dffd-49c0-85bc-5e074f36d729" />
 
@@ -172,7 +231,9 @@ Admin Panel → **Agents**
 - **Import** users via copy/paste list (name + email) or **CSV** (more fields).  
 - **More:** add to organizations, send password resets, register, lock/unlock, delete.
 
-**Notes:** Deleting a user typically requires deleting their tickets too (data linkage).
+**Tips:** 
+- Create one individual user using any name and email (can be a fake email for mock tickets) you like.
+- Deleting a user typically requires deleting their tickets too (data linkage).
 
 <img width="953" height="339" alt="5 1 add users" src="https://github.com/user-attachments/assets/77f2b992-38bf-410f-afe0-547698ee50c5" />
 
