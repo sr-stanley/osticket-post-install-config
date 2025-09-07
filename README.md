@@ -50,9 +50,13 @@ Log in to the **Admin Panel** with the admin account you created during installa
 
 <a href="http://localhost/osTicket/scp/login.php" target="_blank" rel="noopener">osTicket Login</a>
 
+<img width="929" height="685" alt="0 1 nav to login page" src="https://github.com/user-attachments/assets/fc902708-2cd4-4310-a20c-3f23a22ac1fd" />
+
 In osTicket you can toggle between:
 - **Admin Panel** (system configuration)
 - **Agent Panel** (day-to-day ticket work)
+  
+<img width="351" height="41" alt="0 2 admin vs agent" src="https://github.com/user-attachments/assets/77048572-879c-42c3-bfa1-e5ae63964633" />
 
 For this guide, you’ll primarily use the **Admin Panel**.
 
@@ -79,12 +83,27 @@ Admin Panel → **Agents** → **Roles**
 - Use **More** to enable/disable/delete.  
 - Click a role to set permissions for **Tickets**, **Tasks**, **Knowledgebase**.
 
-**Tips:** Start with roles like *Help Desk*, *Supervisor*, *Admin* and grant only what’s needed.
+**Tips:** 
+- Start by creating roles like ***Help Desk (Tier 1)*** and ***Supervisor*** and grant different permissions for each role.
+  - **Help Desk (Tier 1)**
+    - Permissions → Assign, Close, Create, Link, Mark as Answered, Post Reply, Release.
+    - Tasks → Assign, Close, Create, Post Reply.
+    - Knowledgebase → Premade.
+  - **Supervisor**
+    - Permissions → All permissions except delete.
+    - Tasks → All tasks except delete.
+    - Knowledgebase → Premade.
+
+<img width="956" height="380" alt="1 1 configure roles" src="https://github.com/user-attachments/assets/af38ca0e-41fd-4759-9058-bb11155cfe72" />
+
+<img width="955" height="568" alt="1 2 add new role" src="https://github.com/user-attachments/assets/2d04e63c-2818-4c3e-a3fb-250b8e95415d" />
+
+<img width="956" height="702" alt="1 3 set permissions" src="https://github.com/user-attachments/assets/349459cf-3e22-4c9d-a3d3-013bd7e5724b" />
 
 ---
 
 ### STEP 2 — Configure Departments
-**Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, CIS Admins). They keep workflows organized and tickets routed correctly.
+**Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, SysAdmins). They keep workflows organized and tickets routed correctly.
 
 **Instructions:**  
 Admin Panel → **Agents** → **Departments**  
@@ -92,20 +111,40 @@ Admin Panel → **Agents** → **Departments**
 - Use **More** to enable/disable/archive/delete.  
 - Click a department to adjust settings and access.
 
-**Tips:** Map departments to real org units so mock tickets feel realistic.
+**Tips:** 
+- Start by creating deparments like ***Help Desk*** and ***Systems***.
+  - **Help Desk (Tier 1)**
+    - Rename *Support* to *Help Desk (Tier 1)*
+  - **Systems**
+    - Parent → Top-Level Department
+- The *access* tab allows you to add agents to each department, we will add agents later.
+- You can assign *SLAs* later after they have been created.
+- Departments can be assigned as a *sub-department* by selecting a *parent department*.
+- Map departments to real organization units so mock tickets feel realistic.
+
+<img width="955" height="326" alt="2 1 configure departments" src="https://github.com/user-attachments/assets/d8b81788-1e1c-4779-9bf0-2f1a2fe3b26b" />
+
+<img width="956" height="883" alt="2 2 configure department settings" src="https://github.com/user-attachments/assets/8cc6a3f5-b338-4633-aa9a-d0a1df403f8c" />
 
 ---
 
 ### STEP 3 — Configure Teams
-**Why:** Teams allow **cross-department collaboration** on specific issues/projects (e.g., an “Online Banking” team that includes Help Desk + CIS Admins).
+**Why:** 
+Teams allow **cross-department collaboration** on specific issues/projects (e.g., an “Online Banking” team that includes Help Desk + Sysadmin agents).
 
 **Instructions:**  
 Admin Panel → **Agents** → **Teams**  
 - **Add** new teams.  
 - Use **More** to enable/disable/delete.  
-- Click a team to adjust members and behavior.
+- Click a team to adjust team information and members.
 
-**Tips:** Use teams when tickets often require multiple groups.
+**Tips:** 
+- Start by creating teams like ***Accounts and Passwords*** and ***PC Fix***.
+- You can add agents to these teams after they have been entered.
+
+<img width="955" height="300" alt="3 1 configure teams" src="https://github.com/user-attachments/assets/0bc33c3e-d6a2-4965-87ed-f2c0f904a210" />
+
+<img width="955" height="425" alt="3 2 add members to teams" src="https://github.com/user-attachments/assets/38745d64-ab69-491e-beb5-9da6b266112c" />
 
 ---
 
@@ -120,6 +159,8 @@ Admin Panel → **Agents**
 
 **Tips:** Least privilege: grant only what the agent needs.
 
+<img width="953" height="339" alt="4 1 configure agents" src="https://github.com/user-attachments/assets/197e9d1f-dffd-49c0-85bc-5e074f36d729" />
+
 ---
 
 ### STEP 5 — Configure Users
@@ -132,6 +173,12 @@ Admin Panel → **Agents**
 - **More:** add to organizations, send password resets, register, lock/unlock, delete.
 
 **Notes:** Deleting a user typically requires deleting their tickets too (data linkage).
+
+<img width="953" height="339" alt="5 1 add users" src="https://github.com/user-attachments/assets/77f2b992-38bf-410f-afe0-547698ee50c5" />
+
+<img width="638" height="359" alt="5 2 import copy-paste" src="https://github.com/user-attachments/assets/2412c67e-cb70-4de5-aea8-3a0be2c693ec" />
+
+<img width="644" height="381" alt="5 3 import csv" src="https://github.com/user-attachments/assets/76fc22d7-b93a-4897-91c6-aab97deae224" />
 
 ---
 
@@ -148,6 +195,8 @@ Admin Panel → **Manage** → **SLA**
 - Align schedules to **business hours** and **time zones**.  
 - Use stricter targets for **high-impact** issues.  
 - Monitor breaches and refine staffing/process if SLAs slip.
+  
+<img width="955" height="298" alt="6 1 configure sla" src="https://github.com/user-attachments/assets/c7b40e5c-b452-4bb8-8d54-c15a65d4a3af" />
 
 ---
 
@@ -163,6 +212,8 @@ Admin Panel → **Manage** → **Help Topics**
 **Tips:**  
 - Use **parent topics** with **subtopics** for clarity.  
 - Tie topics to **departments/teams** and **SLA plans** where appropriate.
+  
+<img width="953" height="414" alt="7 1 configure help topics" src="https://github.com/user-attachments/assets/5a15f2cb-1ae7-4d39-8fb5-67b50f8ac1da" />
 
 ---
 
