@@ -26,7 +26,7 @@ This guide walks you through a **basic post-installation configuration** of the 
 - [STEP 3 — Configure Teams](#step-3--configure-teams)
 - [STEP 4 — Configure Agents](#step-4--configure-agents)
 - [STEP 5 — Configure Users](#step-5--configure-users)
-- [STEP 6 — Configure SLAs](#step-6--configure-slas)
+- [STEP 6 — Configure SLAs](#step-6--configure-schedules-and-slas)
 - [STEP 7 — Configure Help Topics](#step-7--configure-help-topics)
 - [Summary / Next Steps](#summary--next-steps)
 
@@ -84,7 +84,7 @@ Admin Panel → **Agents** → **Roles**
 - Click a role to set permissions for **Tickets**, **Tasks**, **Knowledgebase**.
 
 **Instructions:** 
-- Start by creating roles like ***Agent (Tier 1)***, ***Maintenance Tech*** and ***Supervisor*** and grant different permissions for each role.
+- Start by creating roles like **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and grant different permissions for each role.
   - **Agent (Tier 1)**
     - Permissions → Assign, Close, Create, Link, Mark as Answered, Post Reply, Release.
     - Tasks → Assign, Close, Create, Post Reply.
@@ -109,20 +109,22 @@ Admin Panel → **Agents** → **Roles**
 ### STEP 2 — Configure Departments
 **Why:** Departments define **ticket visibility and assignment** scope (e.g., Help Desk, Networking, Security). They keep workflows organized and tickets routed correctly.
 
-**Instructions:**  
+**Outline:**  
 Admin Panel → **Agents** → **Departments**  
 - **Add** new departments.  
 - Use **More** to enable/disable/archive/delete.  
 - Click a department to adjust settings and access.
 
-**Tips:** 
-- Start by creating deparments like ***Help Desk***, ***Maintenance*** and ***Systems***.
+**Instructions:** 
+- Start by creating deparments like **Help Desk**, **Maintenance** and **Systems**.
   - **Help Desk**
     - Rename *Support* to *Help Desk*
   - **Maintenance**
     - Keep as is (comes already created when setting up osTicket).
   - **Systems**
     - Parent → Top-Level Department
+   
+**Notes:**
 - The *access* tab allows you to add agents to each department, we will add agents later.
 - You can assign *SLAs* later after they have been created.
 - Departments can be assigned as a *sub-department* by selecting a *parent department*.
@@ -138,14 +140,16 @@ Admin Panel → **Agents** → **Departments**
 **Why:** 
 Teams allow **cross-department collaboration** on specific issues/projects (e.g., an “Online Banking” team that includes Help Desk + Sysadmin agents).
 
-**Instructions:**  
+**Outline:**  
 Admin Panel → **Agents** → **Teams**  
 - **Add** new teams.  
 - Use **More** to enable/disable/delete.  
 - Click a team to adjust team information and members.
 
 **Tips:** 
-- Start by creating teams like ***Accounts and Passwords*** and ***PC Fix***.
+- Start by creating teams like **Accounts and Passwords** and **PC Fix**.
+
+**Notes:**
 - *Level I Support* comes already created when setting up osTicket, **delete** it to simplify the mock ticket workflow.
 - You can add agents to these teams after they have been entered.
 
@@ -225,14 +229,16 @@ Admin Panel → **Agents**
 ### STEP 5 — Configure Users
 **Why:** Users are the **ticket owners** (end customers). They submit requests and track their own tickets; they don’t access admin/agent panels.
 
-**Instructions:**  
+**Outline:**  
 **Agent Panel** → **Users**  
 - **Add** individual users.  
 - **Import** users via copy/paste list (name + email) or **CSV** (more fields).  
 - **More:** add to organizations, send password resets, register, lock/unlock, delete.
 
-**Tips:** 
+**Instructions:** 
 - Create one individual user using any name and email (can be a fake email for mock tickets) you like.
+
+**Notes:**
 - Deleting a user typically requires deleting their tickets too (data linkage).
 
 <img width="953" height="339" alt="5 1 add users" src="https://github.com/user-attachments/assets/77f2b992-38bf-410f-afe0-547698ee50c5" />
@@ -243,20 +249,28 @@ Admin Panel → **Agents**
 
 ---
 
-### STEP 6 — Configure SLAs
+### STEP 6 — SLAs
 **Why:** SLAs define **response/resolution timeframes** (e.g., critical vs normal). They drive priority, overdue status, and performance tracking.
 
-**Instructions:**  
+**Outline:**  
 Admin Panel → **Manage** → **SLA**  
 - **Add New** SLA Plans.  
 - **More:** enable/disable/delete.  
 - Click an SLA to adjust schedules and targets.
 
-**Considerations:**  
+**Instructions:**
+- Create five SLA plans. SLAs inside of osTicket define Grace Periods as the resolution target which is not a universal practice.
+  - **Default SLA** → Business Hours, 16h Grace Period, Transient
+  - **P1 Critical** → 24x7 Schedule, 4h Grace Period, Non-transient
+  - **P2 High** → Business Hours, 8h Grace Period, Non-transient
+  - **P3 Normal** → Business Hours, 24h Grace Period, Non-transient
+  - **P4 Low** → Business Hours, 40h Grace Period, Non-transient
+
+**Notes:**  
 - Align schedules to **business hours** and **time zones**.  
 - Use stricter targets for **high-impact** issues.  
 - Monitor breaches and refine staffing/process if SLAs slip.
-  
+
 <img width="955" height="298" alt="6 1 configure sla" src="https://github.com/user-attachments/assets/c7b40e5c-b452-4bb8-8d54-c15a65d4a3af" />
 
 ---
@@ -264,13 +278,13 @@ Admin Panel → **Manage** → **SLA**
 ### STEP 7 — Configure Help Topics
 **Why:** Help Topics categorize issues (e.g., “Password Reset,” “Equipment Request,” “Business Critical Outage”) and guide **routing**, **priority**, and **reporting**.
 
-**Instructions:**  
+**Outline:**  
 Admin Panel → **Manage** → **Help Topics**  
 - **Add New** Help Topics.  
 - **More:** enable/disable/archive/delete.  
 - Click a topic to edit **parent/subtopic**, **priority**, **SLA**.
 
-**Tips:**  
+**Notes:**  
 - Use **parent topics** with **subtopics** for clarity.  
 - Tie topics to **departments/teams** and **SLA plans** where appropriate.
   
