@@ -33,7 +33,8 @@ This guide walks you through a **basic post-installation configuration** of the 
 ---
 
 ### Why Configure Before Creating Tickets
-**Short answer:** Configuration establishes the **rules, access, and workflows** the system follows.  
+**Short answer:** Configuration establishes the **rules, access, and workflows** the system follows.
+
 **Why it matters:** Proper setup ensures:
 - The right **roles/permissions** control who can see and do what.
 - **Departments/teams** receive the correct tickets.
@@ -75,13 +76,17 @@ For this guide, you’ll primarily use the **Admin Panel**.
 ---
 
 ### STEP 1 — Configure Roles
-**Why:** Roles define **permissions** (view, reply, assign, manage) that agents have **per department**. Clear roles prevent over-permissioning and protect data.
+**Why:** Roles define **permissions** (view, reply, assign, manage) that agents have. Clear roles prevent over-permissioning and protect data.
 
 **Outline:**  
 Admin Panel → **Agents** → **Roles**  
 - **Add** new roles.  
 - Use **More** to enable/disable/delete.  
 - Click a role to set permissions for **Tickets**, **Tasks**, **Knowledgebase**.
+
+<p>
+ <img width="956" height="341" alt="1 1 configure roles2" src="https://github.com/user-attachments/assets/1ce90dd8-7dee-4b10-96e7-725e3278971a" />
+</p>
 
 **Instructions:** 
 Create roles **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and grant different permissions for each role.
@@ -98,10 +103,6 @@ Create roles **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and gra
   - Tasks → All tasks except delete.
   - Knowledgebase → Premade.
 
-<img width="956" height="380" alt="1 1 configure roles" src="https://github.com/user-attachments/assets/af38ca0e-41fd-4759-9058-bb11155cfe72" />
-
-<img width="955" height="568" alt="1 2 add new role" src="https://github.com/user-attachments/assets/2d04e63c-2818-4c3e-a3fb-250b8e95415d" />
-
 <img width="956" height="702" alt="1 3 set permissions" src="https://github.com/user-attachments/assets/349459cf-3e22-4c9d-a3d3-013bd7e5724b" />
 
 ---
@@ -114,7 +115,11 @@ Admin Panel → **Agents** → **Departments**
 - **Add** new departments.  
 - Use **More** to enable/disable/archive/delete.  
 - Click a department to adjust settings and access.
-  
+
+<p>
+<img width="955" height="289" alt="2 1 configure departments2" src="https://github.com/user-attachments/assets/08aba93f-90b4-4920-acc6-599743551912" />
+</p>
+
 **Notes:**
 - The *access* tab allows you to add agents to each department, we will add agents later.
 - You can assign *SLAs* later after they have been created.
@@ -129,10 +134,6 @@ Create three deparments **Help Desk**, **Maintenance** and **Systems**.
   - Keep as is (comes already created when setting up osTicket).
 - **Systems**
   - Parent → Top-Level Department
-   
-
-
-<img width="955" height="326" alt="2 1 configure departments" src="https://github.com/user-attachments/assets/d8b81788-1e1c-4779-9bf0-2f1a2fe3b26b" />
 
 <img width="956" height="883" alt="2 2 configure department settings" src="https://github.com/user-attachments/assets/8cc6a3f5-b338-4633-aa9a-d0a1df403f8c" />
 
@@ -148,14 +149,16 @@ Admin Panel → **Agents** → **Teams**
 - Use **More** to enable/disable/delete.  
 - Click a team to adjust team information and members.
 
+<p>
+<img width="955" height="262" alt="3 1 configure teams2" src="https://github.com/user-attachments/assets/97a399cd-ddd2-4661-be82-d63ffa4fbc45" />
+</p>
+
 **Notes:**
 - *Level I Support* comes already created when setting up osTicket, **delete** it to simplify the mock ticket workflow.
 - You can add agents to these teams after they have been entered.
 
 **Instructions:** 
 Create two teams like **Accounts and Passwords** and **PC Fix**.
-
-<img width="955" height="300" alt="3 1 configure teams" src="https://github.com/user-attachments/assets/0bc33c3e-d6a2-4965-87ed-f2c0f904a210" />
 
 <img width="955" height="425" alt="3 2 add members to teams" src="https://github.com/user-attachments/assets/38745d64-ab69-491e-beb5-9da6b266112c" />
 
@@ -169,6 +172,10 @@ Admin Panel → **Agents**
 - **Add** new agents.  
 - **More:** enable/disable, reset permissions, change departments, export, delete.  
 - Click an agent to edit **account**, **access**, **permissions**, **teams**.
+
+<p>
+<img width="953" height="303" alt="4 1 configure agents2" src="https://github.com/user-attachments/assets/d529a973-ab87-4c07-b93f-bdc7ac181178" />
+</p>
 
 **Instructions:**
 Create three agents and configure their **accounts**, **access**, **permissions** and **teams**.
@@ -209,7 +216,7 @@ Create three agents and configure their **accounts**, **access**, **permissions*
       - **Miscellaneous** → Agent, Banlist, Department, Search, Stats
     - **Teams** → **Accounts and Passwords** and **PC Fix**
 
-<img width="953" height="339" alt="4 1 configure agents" src="https://github.com/user-attachments/assets/197e9d1f-dffd-49c0-85bc-5e074f36d729" />
+<img width="956" height="925" alt="4 2 agent settings" src="https://github.com/user-attachments/assets/ad89ce49-24ea-405f-a448-a59802652b5a" />
 
 ---
 
@@ -222,13 +229,15 @@ Create three agents and configure their **accounts**, **access**, **permissions*
 - **Import** users via copy/paste list (name + email) or **CSV** (more fields).  
 - **More:** add to organizations, send password resets, register, lock/unlock, delete.
 
-**Instructions:** 
-Create one individual user using any name and email (can be a fake email for mock tickets) you like.
+<p>
+<img width="953" height="301" alt="5 1 add users2" src="https://github.com/user-attachments/assets/753ed07e-682f-4232-a5ff-466c4ee91587" />
+</p>
 
 **Notes:**
 - Deleting a user typically requires deleting their tickets too (data linkage).
 
-<img width="953" height="339" alt="5 1 add users" src="https://github.com/user-attachments/assets/77f2b992-38bf-410f-afe0-547698ee50c5" />
+**Instructions:** 
+Create one individual user using any name and email (can be a fake email for mock tickets) you like.
 
 <img width="638" height="359" alt="5 2 import copy-paste" src="https://github.com/user-attachments/assets/2412c67e-cb70-4de5-aea8-3a0be2c693ec" />
 
@@ -245,6 +254,15 @@ Admin Panel → **Manage** → **SLA**
 - **More:** enable/disable/delete.  
 - Click an SLA to adjust schedules and targets.
 
+<p>
+<img width="955" height="260" alt="6 1 configure sla2" src="https://github.com/user-attachments/assets/dae4344a-f4e5-46c1-9bde-1d796c618822" />
+</p>
+
+**Notes:**  
+- Align schedules to **business hours** and **time zones**.  
+- Use stricter targets for **high-impact** issues.  
+- Monitor breaches and refine staffing/process if SLAs slip.
+
 **Instructions:**
 Create five SLA plans. SLAs inside of osTicket define Grace Periods as the resolution target which is not a universal practice.
 - **Default SLA** → Business Hours, 16h Grace Period, Transient
@@ -253,12 +271,7 @@ Create five SLA plans. SLAs inside of osTicket define Grace Periods as the resol
 - **P3 Normal** → Business Hours, 24h Grace Period, Non-transient
 - **P4 Low** → Business Hours, 40h Grace Period, Non-transient
 
-**Notes:**  
-- Align schedules to **business hours** and **time zones**.  
-- Use stricter targets for **high-impact** issues.  
-- Monitor breaches and refine staffing/process if SLAs slip.
 
-<img width="955" height="298" alt="6 1 configure sla" src="https://github.com/user-attachments/assets/c7b40e5c-b452-4bb8-8d54-c15a65d4a3af" />
 
 ---
 
@@ -270,6 +283,10 @@ Admin Panel → **Manage** → **Help Topics**
 - **Add New** Help Topics.  
 - **More:** enable/disable/archive/delete.  
 - Click a topic to edit **parent/subtopic**, **priority**, **SLA**.
+
+<p>
+<img width="953" height="376" alt="7 1 configure help topics2" src="https://github.com/user-attachments/assets/2f226350-a656-4002-a4d1-fbe6e6678c4c" />
+</p>
 
 **Notes:**  
 - Use **parent topics** with **subtopics** for clarity.  
@@ -285,8 +302,6 @@ Create seven **Help Topics** and assign **SLAs**, **Priority Levels**, **Departm
 - Add Top-Level-Topic **Account Issues** → Department - Help Desk, Priority - Normal, SLA - Default SLA, Team - None
   - Add Subtopic **Account Issues / Password Reset** → Department - Help Desk, Priority - Normal, SLA - P3, Team - Accounts and Passwords
   - Add Subtopic **Account Issues / Account Lockout** → Department - Help Desk, Priority - HighAccount, SLA - P2, Team - Accounts and Passwords
-
-<img width="953" height="414" alt="7 1 configure help topics" src="https://github.com/user-attachments/assets/5a15f2cb-1ae7-4d39-8fb5-67b50f8ac1da" />
 
 ---
 
