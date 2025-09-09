@@ -89,7 +89,7 @@ Admin Panel → **Agents** → **Roles**
 </p>
 
 **Instructions:** 
-Create roles **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and grant different permissions for each role.
+Create three roles: **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and grant different permissions for each role.
 - **Agent (Tier 1)**
   - Permissions → Assign, Close, Create, Link, Mark as Answered, Post Reply, Release.
   - Tasks → Assign, Close, Create, Post Reply.
@@ -124,10 +124,10 @@ Admin Panel → **Agents** → **Departments**
 - The *access* tab allows you to add agents to each department, we will add agents later.
 - You can assign *SLAs* later after they have been created.
 - Departments can be assigned as a *sub-department* by selecting a *parent department*.
-- Map departments to real organization units so mock tickets feel realistic.
+- Name departments after the groups that actually own the work.
   
 **Instructions:** 
-Create three departments **Help Desk**, **Maintenance** and **Systems**.
+Create three departments: **Help Desk**, **Maintenance** and **Systems**.
 - **Help Desk**
   - Rename *Support* to *Help Desk*
 - **Maintenance**
@@ -158,7 +158,7 @@ Admin Panel → **Agents** → **Teams**
 - You can add agents to these teams after they have been entered.
 
 **Instructions:** 
-Create two teams like **Accounts and Passwords** and **PC Fix**.
+Create two teams: **Accounts and Passwords** and **PC Fix**.
 
 <img width="955" height="425" alt="3 2 add members to teams" src="https://github.com/user-attachments/assets/38745d64-ab69-491e-beb5-9da6b266112c" />
 
@@ -183,9 +183,9 @@ Create three agents and configure their **accounts**, **access**, **permissions*
 - When setting the password:
   1. Uncheck "Send the agent a password reset email"
   2. Enter a New Password
-  3. Uncheck "Require password change at next login, Click **Update**.
+  3. Uncheck "Require password change at next login", **then** click **Update**.
 
-  - **Agent 1** – *Agent (Tier1)*
+  - **Agent 1** – *Agent (Tier 1)*
     - **Access**
       - Assign to department **Help Desk** and set the role to **Agent (Tier 1)**
     - **Permissions**
@@ -208,7 +208,7 @@ Create three agents and configure their **accounts**, **access**, **permissions*
   - **Agent 3** – *Supervisor*
     - **Access**
       - Assign to department **Help Desk** and set the role to **Supervisor**
-      - Assign to extendned access to department **Systems** and set the role to **Supervisor**
+      - Assign to extended access to department **Systems** and set the role to **Supervisor**
     - **Permissions**
       - **Users** → Create, Edit, Manage Account, User Directory
       - **Organizations** → Create, Edit
@@ -293,7 +293,7 @@ Admin Panel → **Manage** → **Help Topics**
 - Tie topics to **departments/teams** and **SLA plans** where appropriate.
 
 **Instructions:**
-Create seven **Help Topics** and assign **SLAs**, **Priority Levels**, **Departments** and **Teams**. Three will parent topics (Top-Level-Topic) and four will be child topics (Subtopic).
+Create seven **Help Topics** and assign **SLAs**, **Priority Levels**, **Departments** and **Teams**. Three will be parent topics (Top-Level-Topic) and four will be child topics (Subtopic).
 - Leave **Feedback** and **General Inquiry** as is. Delete **Report a Problem / Access Issue**.
 - Add Top-Level-Topic **Service Outage** → Department - Systems, Priority - Emergency, SLA - P1, Team - None
 - Edit **Report a Problem** → Department - Help Desk, Priority - Normal, SLA - Default SLA, Team - None
