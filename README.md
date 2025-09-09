@@ -127,7 +127,7 @@ Admin Panel → **Agents** → **Departments**
 - Map departments to real organization units so mock tickets feel realistic.
   
 **Instructions:** 
-Create three deparments **Help Desk**, **Maintenance** and **Systems**.
+Create three departments **Help Desk**, **Maintenance** and **Systems**.
 - **Help Desk**
   - Rename *Support* to *Help Desk*
 - **Maintenance**
@@ -208,7 +208,7 @@ Create three agents and configure their **accounts**, **access**, **permissions*
   - **Agent 3** – *Supervisor*
     - **Access**
       - Assign to department **Help Desk** and set the role to **Supervisor**
-      - Assign to extedned access to department **Systems** and set the role to **Supervisor**
+      - Assign to extendned access to department **Systems** and set the role to **Supervisor**
     - **Permissions**
       - **Users** → Create, Edit, Manage Account, User Directory
       - **Organizations** → Create, Edit
@@ -294,14 +294,14 @@ Admin Panel → **Manage** → **Help Topics**
 
 **Instructions:**
 Create seven **Help Topics** and assign **SLAs**, **Priority Levels**, **Departments** and **Teams**. Three will parent topics (Top-Level-Topic) and four will be child topics (Subtopic).
-- Leave **Feed Back** and **General Inqury** as is. Delete **Report a Problem / Access Issue**.
+- Leave **Feedback** and **General Inquiry** as is. Delete **Report a Problem / Access Issue**.
 - Add Top-Level-Topic **Service Outage** → Department - Systems, Priority - Emergency, SLA - P1, Team - None
 - Edit **Report a Problem** → Department - Help Desk, Priority - Normal, SLA - Default SLA, Team - None
   - Add Subtopic **Report a Problem / Hardware** → Department - Help Desk, Priority - Normal, SLA - P3, Team - PC Fix
   - Add Subtopic **Report a Problem / Software** → Department - Help Desk, Priority - Normal, SLA - P3, Team - PC Fix
 - Add Top-Level-Topic **Account Issues** → Department - Help Desk, Priority - Normal, SLA - Default SLA, Team - None
   - Add Subtopic **Account Issues / Password Reset** → Department - Help Desk, Priority - Normal, SLA - P3, Team - Accounts and Passwords
-  - Add Subtopic **Account Issues / Account Lockout** → Department - Help Desk, Priority - HighAccount, SLA - P2, Team - Accounts and Passwords
+  - Add Subtopic **Account Issues / Account Lockout** → Department - Help Desk, Priority - High, SLA - P2, Team - Accounts and Passwords
 
 ---
 
