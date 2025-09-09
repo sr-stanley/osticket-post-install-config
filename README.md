@@ -26,7 +26,7 @@ This guide walks you through a **basic post-installation configuration** of the 
 - [STEP 3 — Configure Teams](#step-3--configure-teams)
 - [STEP 4 — Configure Agents](#step-4--configure-agents)
 - [STEP 5 — Configure Users](#step-5--configure-users)
-- [STEP 6 — Configure SLAs](#step-6--configure-schedules-and-slas)
+- [STEP 6 — Configure SLAs](#step-6--configure-slas)
 - [STEP 7 — Configure Help Topics](#step-7--configure-help-topics)
 - [Summary / Next Steps](#summary--next-steps)
 
