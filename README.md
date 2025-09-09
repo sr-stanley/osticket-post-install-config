@@ -245,7 +245,7 @@ Create one individual user using any name and email (can be a fake email for moc
 
 ---
 
-### STEP 6 — SLAs
+### STEP 6 — Configure SLAs
 **Why:** SLAs define **response/resolution timeframes** (e.g., critical vs normal). They drive priority, overdue status, and performance tracking.
 
 **Outline:**  
