@@ -97,11 +97,12 @@ Create three roles: **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** 
 - **Maintenance Tech**
   - Permissions → Close, Create, Link, Mark as Answered, Post Reply, Release.
   - Tasks → Close, Create, Post Reply.
-  - Premade → None.
+  - Knowledgebase → None.
 - **Supervisor**
   - Permissions → All permissions except delete.
   - Tasks → All tasks except delete.
-  - Knowledgebase → Premade.
+  - Knowledgebase → Premade (wont actually use).
+    - Premade = Canned responses, which are pre-written message snippets you can drop into tickets to save time and keep wording consistent.
 
 <img width="956" height="702" alt="1 3 set permissions" src="https://github.com/user-attachments/assets/349459cf-3e22-4c9d-a3d3-013bd7e5724b" />
 
