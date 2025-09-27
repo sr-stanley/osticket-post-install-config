@@ -1,4 +1,3 @@
-# osticket-post-install-config
 <p align="center">
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
@@ -309,9 +308,9 @@ Create seven **Help Topics** and assign **SLAs**, **Priority Levels**, **Departm
 ### Summary / Next Steps
 You’ve configured the core building blocks that control **who** sees **what**, **how** tickets are routed, and **how fast** they must be handled.  
 **Now you’re ready to practice with mock tickets** that behave like real requests:
-1. *Optional* Create more users (or import a list).  
+1. *Optional* Create more users (or try importing a list).  
 2. Submit tickets under different **Help Topics**.  
 3. Watch routing to **Departments/Teams** and ensure **SLAs** behave as expected.  
 4. Adjust roles, topics, and SLAs based on what you learn.
 
-Happy ticketing!
+🎉Happy ticketing!
