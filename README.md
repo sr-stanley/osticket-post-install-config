@@ -90,7 +90,7 @@ Admin Panel → **Agents** → **Roles**
 **Instructions:** 
 Create three roles: **Agent (Tier 1)**, **Maintenance Tech** and **Supervisor** and grant different permissions for each role.
 - **Agent (Tier 1)**
-  - Permissions → Assign, Close, Create, Link, Mark as Answered, Post Reply, Release.
+  - Permissions → Assign, Close, Create, Link, Mark as Answered, Merge, Post Reply, Release.
   - Tasks → Assign, Close, Create, Post Reply.
   - Knowledgebase → None.
 - **Maintenance Tech**
@@ -192,7 +192,7 @@ Create three agents and configure their **accounts**, **access**, **permissions*
       - **Users** → Create, Edit, Manage Account, User Directory
       - **Organizations** → Create, Edit
       - **Knowledgebase** → None
-      - **Miscellaneous** → Agent
+      - **Miscellaneous** → Agent, Department
     - **Teams** → **Accounts and Passwords** and **PC Fix**
    
   - **Agent 2** – *Maintenance Worker*
